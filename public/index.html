@@ -13,6 +13,11 @@
     </script>
   </head>
   <body>
+    <div class="toolbar">
+      <button id="yellow">yellow</button>
+      <button id="red">red</button>
+
+    </div>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -21,5 +26,14 @@
         <div class="title">koujina</div>
       </div>
     </div>
+    <script>
+      document.querySelector('#yellow').addEventListener('click', () => {
+        gameInstance.SendMessage('Cube', 'SwitchColorToYellow')
+      })
+      document.querySelector('#red').addEventListener('click', () => {
+        gameInstance.SendMessage('Cube', 'SwitchColorToRed')
+      })
+    </script>
   </body>
+  
 </html>
